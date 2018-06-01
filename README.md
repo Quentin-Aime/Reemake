@@ -3,7 +3,6 @@
 https://Quentin-Aime.github.io/Reemake
 
 To have the integration on github.io I had to cut some movies from the list (size > 100 Mo).
-
 They are still selectable but the player won't work with them.
 
 ## Link to partners profiles
