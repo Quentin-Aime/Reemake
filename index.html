@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="assets/css/reset.css" />
+    <link rel="stylesheet" href="assets/css/style.css" />
+    <link rel="stylesheet" href="assets/css/burgermenu.css" />
+    <link rel="stylesheet" href="assets/css/player.css" />
+    <title>Project</title>
+</head>
+
+<body>
+    <section class="homepage">
+        <header>
+            <div class="wrapper">
+                <div class="full-bg-content">
+
+                    <nav>
+                        <a href="#">
+                            <h1 class="name-logo">Reemake<span>.</span></h1>
+                        </a>
+                        <div class="burgermenu">
+                            <a href="#">
+                                <div class="menu-logo hamburger transition">
+                                    <div class="top-bun"></div>
+                                    <div class="meat"></div>
+                                    <div class="bottom-bun"></div>
+                                </div>
+                            </a>
+                        </div>
+                    </nav>
+
+                    <div class="header-video">
+                        <video src="assets/video/bg-video.mp4" loop autoplay muted></video>
+                    </div>
+
+                    <div class="new-movie">New</div>
+
+                    <div class="title-movie">
+                        <h2>Red Hood : The Fallen.</h2>
+                        <p class="baseline">DC Comics Batman Fan Film</p>
+                        <div class="btn">Watch Now &#8594;</div>
+                    </div>
+
+                </div>
+            </div>
+        </header>
+
+        <section class="movies-list">
+            <div class="logo-carre">R<span>.</span></div>
+            <div class="sidebar">
+                <div class="nav comedy" id="Comedy">
+                    <div class="icon-comedy"></div>
+                    <br> Comedy
+                </div>
+                <div class="nav animation" id="Animation">
+                    <div class="icon-animation"></div>
+                    <br> Animation
+                </div>
+                <div class="nav thriller" id="Thriller">
+                    <div class="icon-thriller"></div>
+                    <br> Thriller
+                </div>
+                <div class="nav action" id="Action">
+                    <div class="icon-action"></div>
+                    <br> Action
+                </div>
+                <div class="nav all nav-active" id="All">
+                    <br> View All »
+                </div>
+            </div>
+            <div class="wrapper-section">
+                <ul class="filter-navbar">
+                    <li><a class="filter-nav under-nav-item-active popular" name="Popular" id="Popular">Popular</a>
+                    </li>
+                    <li><a class="filter-nav" name="Year" id="New_Releases">Year</a></li>
+                    <li><a class="filter-nav" name="A-Z" id="Recently">A-Z</a></li>
+                    <li><a class="filter-nav" name="Recommended" id="Recommended">Recommended</a></li>
+                    <div class="search-content">
+                        <input type="search" placeholder="Search..." class="search">
+                        <div class="search-icon"></div>
+                    </div>
+                </ul>
+                <hr />
+                <div class="movie-selection">
+                    <div class="movie-content">
+                    </div>
+                </div>
+            </div>
+        </section>
+        <div class="footer">
+            <span class="copyright">
+            Reemake &copy;2017 - Tous droits réservés
+        </span>
+            <ul class="links">
+                <li><a href="#">Conditions Générales d'Utilisation</a></li>
+                <li><a href="#">Mentions légales</a></li>
+                <li><a href="#">Assistance</a></li>
+                <li><a href="#">Nous contacter</a></li>
+            </ul>
+        </div>
+    </section>
+
+
+    <div class="burger-page">
+        <a href="#"><img class="menu-logo-close" src="assets/img/cancel-gray.svg" alt="back"/></a>
+        <div class="category-burger category-4 category-right">
+            <img src="assets/img/action_bg.png" alt="Action">
+            <h2>Action</h2>
+        </div>
+        <div class="category-burger category-3">
+            <img src="assets/img/thriller_bg.png" alt="Thriller">
+            <h2>Thriller</h2>
+        </div>
+        <div class="category-burger category-2">
+            <img src="assets/img/animation_bg.png" alt="Animation">
+            <h2>Animation</h2>
+        </div>
+        <div class="category-burger category-1">
+            <img src="assets/img/comedy_bg.png" alt="Comedy">
+            <h2>Comedy</h2>
+        </div>
+    </div>
+
+    <div class="info none">
+        <div class="navbar">
+            <a href="#">
+                <h1 class="name-logo logoclose">Reemake<span>.</span></h1>
+                <div class="exit">
+                    <a class="btn-exit"></a>
+                </div>
+            </a>
+        </div>
+        <div class="container">
+            <div class="player">
+                <div class="video">
+                    <video></video>
+                </div>
+                <h1 class="player-title"></h1>
+                <div class="control-panel">
+                    <div class="control-state">
+                        <a class="btn-play"></a>
+                        <a class="btn-pause hide"></a>
+                        <a class="btn-repeat hide"></a>
+                    </div>
+                    <div class="control-stop">
+                        <a class="btn-stop"></a>
+                    </div>
+                    <div class="control-bar">
+                        <input id="video-control" type="range" min="0" max="100" step="0.001" value="0" oninput="SetVideo(this.value)" onchange="SetVideo(this.value)"></input>
+                        <div class="progress-bar"></div>
+                    </div>
+                    <div class="control-time"></div>
+                    <div class="control-volume">
+                        <input id="volume-control" type="range" min="0" max="100" step="1" value="100" oninput="SetVolume(this.value)" onchange="SetVolume(this.value)"></input>
+                        <a class="btn-volumeon"></a>
+                        <a class="btn-volumeoff hide"></a>
+                    </div>
+                    <div class="control-fullscreen">
+                        <a class="btn-fullscreen"></a>
+                    </div>
+                </div>
+                <div class="pause-screen hide">
+                    <div class="pause-icon"></div>
+                </div>
+            </div>
+            <h1 class="tileMovie"></h1>
+            <span class="authors"></span>
+            <div class="info-right">
+                <span class="views"></span>
+                <br>
+                <div class="vote">
+                </div>
+            </div>
+            <div class="more-infos">
+                <span class="duration"></span>
+                <br><br>
+                <span class="year"></span>
+                <br><br>
+                <span class="rating"></span>
+                <br><br>
+                <span class="languageAudio"></span>
+                <br><br>
+                <span class="languageSubtile"></span>
+                <br><br>
+                <span class="category"></span>
+                <div class="separator"></div>
+                <p class="description"></p>
+            </div>
+        </div>
+        <div class="commentaires-box">
+            <div class="container">
+                <h3 class="commentaires-title">3 Comments</h3>
+                <div class="commentaires-separator"></div>
+                <form class="commentaire-write">
+                    <input class="input-username" type="text" placeholder="   Username...">
+                    <textarea name="comment" class="textarea-comment" cols="30" rows="10" placeholder="  Message..."></textarea>
+                    <a class="btn-send">Send</a>
+                </form>
+                <div class="commentaires-separator"></div>
+                <div class="commentaires-posted">
+                    <div class="commentaire-u">
+                        <h5 class="commentaire-username">
+                            SummerCoconut
+                        </h5>
+                        <p class="commentaire-message">
+                            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Obcaecati odit dolores aliquid quaerat. In doloremque ab nulla aspernatur dignissimos neque consectetur atque consequatur eveniet eos aliquid tempore odio, repudiandae ut.
+                        </p>
+                        <span class="commentaire-date">
+                            2 days ago
+                        </span>
+                    </div>
+                    <div class="commentaire-u">
+                        <h5 class="commentaire-username">
+                            Sewarlock
+                        </h5>
+                        <p class="commentaire-message">
+                            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Suscipit accusamus autem commodi id vel velit ab placeat numquam, voluptatum nulla debitis molestiae incidunt, non impedit quo consequatur mollitia provident sunt quibusdam dolorum libero inventore labore laborum? Accusantium, officia in. Culpa modi ab dicta eligendi vitae fuga perferendis vel. Sapiente perferendis reiciendis ullam, laudantium aliquam cupiditate, saepe nemo, culpa fuga quia dolor laborum blanditiis voluptatem alias inventore veritatis neque est asperiores beatae quasi repudiandae pariatur. Modi asperiores culpa nam quo aut accusamus ex, quos sit amet quam voluptatibus perspiciatis corporis tenetur eveniet fugiat natus ullam vel. Neque maiores veniam, adipisci sapiente.
+                        </p>
+                        <span class="commentaire-date">
+                            3 days ago
+                        </span>
+                    </div>
+                    <div class="commentaire-u">
+                        <h5 class="commentaire-username">
+                            Sniperv
+                        </h5>
+                        <p class="commentaire-message">
+                            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Neque, eos at quia ut provident aspernatur nemo et nostrum omnis temporibus illo maxime quos quo error perferendis debitis beatae hic accusamus sed sequi ipsam culpa cum harum perspiciatis! Nesciunt culpa placeat sit eligendi tempora vero. Voluptate ad quidem dolor, sit quia deleniti excepturi, necessitatibus qui magni, eveniet et ipsum. Aperiam, unde.
+                        </p>
+                        <span class="commentaire-date">
+                            6 days ago
+                        </span>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="footer">
+            <span class="copyright">
+            Reemake &copy;2017 - Tous droits réservés
+        </span>
+            <ul class="links">
+                <li><a href="#">Conditions Générales d'Utilisation</a></li>
+                <li><a href="#">Mentions légales</a></li>
+                <li><a href="#">Assistance</a></li>
+                <li><a href="#">Nous contacter</a></li>
+            </ul>
+        </div>
+    </div>
+
+
+    <!-- JS -->
+    <script src="assets/js/data.js"></script>
+    <script src="assets/js/script.js"></script>
+    <script src="assets/js/autocomplete.js"></script>
+    <script src="assets/js/main.js"></script>
+    <script src="assets/js/player.js"></script>
+
+</body>
+
+</html>
