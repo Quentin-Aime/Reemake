@@ -8,6 +8,10 @@ They are still selectable but the player won't work with them.
 
 ## Link to partners profiles
 
+```
+![Image of Github](https://cdn4.iconfinder.com/data/icons/iconsimple-logotypes/512/github-256.png)
+```
+
 https://github.com/MatttBlok
 https://www.linkedin.com/in/mathieu-b-61034493/
 http://mblok.fr/
